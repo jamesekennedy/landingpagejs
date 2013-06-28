@@ -7,7 +7,7 @@ class LandingPagesController < ApplicationController
 
     respond_to do |format|
       format.html {
-        @landinge_page = LandingPage.find params[:id]
+        @landing_page = LandingPage.find params[:id]
         
       }
       format.json {
