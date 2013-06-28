@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  landing_page: 
+  label: MyString
+  value: MyText
+
+two:
+  landing_page: 
+  label: MyString
+  value: MyText

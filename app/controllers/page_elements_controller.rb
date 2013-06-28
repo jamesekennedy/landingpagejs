@@ -1,0 +1,2 @@
+class PageElementsController < ApplicationController
+end
