@@ -1,1 +1,13 @@
-%h1 {{headline}}
+- content_for :actions do
+  =link_to "New Landing Page", new_landing_page_path
+
+%table.table
+  %tr
+    %th Landing Page
+  - @landinge_pages.each do |landing_page|
+    %tr
+      %td
+        #landing_page= link_to landing_page.title, landing_page_path(landing_page)
+      %td
+        .controls
+          = link_to "Edit", edit_landing_page_path(landing_page)

@@ -48,3 +48,8 @@ gem 'activeadmin'
 gem 'haml-rails'
 # gem 'sass-rails'
 gem "meta_search",    '>= 1.1.0.pre'
+
+
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :git => 'git://github.com/anjlab/bootstrap-rails.git',
+                              :branch => '3.0.0'

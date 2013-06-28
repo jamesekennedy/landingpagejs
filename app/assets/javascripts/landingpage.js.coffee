@@ -11,8 +11,10 @@ apply_template = (data) ->
     $("body").html rendered_text
 
 fetch_json = ->
+  url = "http://landingpagejs.herokuapp.com/landing_pages/#{page_id}.json"
+  # url = "http://localhost:3000/landing_pages/#{page_id}.json"
   $.ajax(
-    url: "http://landingpagejs.herokuapp.com/landing_pages/#{page_id}"
+    url: url
     context: document.body
     dataType: "jsonp"
   ).done((data) ->

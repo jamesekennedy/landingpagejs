@@ -4,7 +4,9 @@ LandingpageJs::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  resources :landing_pages
+  resources :landing_pages do
+    resources :page_elements
+  end
 
 
   # The priority is based upon order of creation:
@@ -56,7 +58,7 @@ LandingpageJs::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'admin/landing_pages#index'
+  root :to => 'landing_pages#index'
   ActiveAdmin.routes(self)
 
   # See how all your routes lay out with "rake routes"
