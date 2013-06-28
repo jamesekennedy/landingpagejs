@@ -56,7 +56,7 @@ LandingpageJs::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'admin/landinge_pages#index'
+  root :to => 'admin/landing_pages#index'
   ActiveAdmin.routes(self)
 
   # See how all your routes lay out with "rake routes"

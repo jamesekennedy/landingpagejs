@@ -3,9 +3,19 @@ class LandingPage < ActiveRecord::Base
   has_many :page_elements
   validate :json_format
 
+
+
+  def to_param
+
+    "#{id}-#{title.parameterize}"
+    
+  end
+
+
   protected
 
   def json_format
     errors[:base] << "not in json format" unless json.is_json?
   end
+
 end
