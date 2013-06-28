@@ -15,7 +15,7 @@
       %tr
         %td#label= element.label
         %td#value
-          = form_for element, :url => landing_page_page_element_path(@landing_page, element) do |f|
+          = form_for element, :url => landing_page_page_element_path(@landing_page, element), :remote => true do |f|
             = f.text_area :value
             = f.submit
         %td.controls

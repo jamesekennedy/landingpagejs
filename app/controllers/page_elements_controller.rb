@@ -20,10 +20,25 @@ class PageElementsController < ApplicationController
 
     @page_element = @landing_page.page_elements.find params[:id]
 
-    if @page_element.update_attributes params[:page_element]
-      redirect_to landing_page_path(@landing_page)
-    else
-      render :edit
+ 
+    respond_to do |format|
+      format.html {
+        if @page_element.update_attributes params[:page_element]
+          redirect_to landing_page_path(@landing_page)
+        else
+          render :edit
+        end
+
+
+      }
+      format.js {
+        if @page_element.update_attributes params[:page_element]
+          render :text => "alert('updated')"
+        else
+          render :text => "alert('failed')"
+      end
+
+      }
     end
   end
 
