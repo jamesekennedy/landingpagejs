@@ -4,10 +4,15 @@
 %table.table
   %tr
     %th Landing Page
+    %th Code
+    %th
   - @landinge_pages.each do |landing_page|
     %tr
       %td
         #landing_page= link_to landing_page.title, landing_page_path(landing_page)
+      %td= landing_page.to_param
       %td
         .controls
           = link_to "Edit", edit_landing_page_path(landing_page)
+          = link_to "Destroy", landing_page_path(landing_page), :method => :delete, :confirm => "Are you sure you want to delete this landing page?"
+          = link_to "Duplicate", duplicate_landing_page_path(landing_page), :method => :post

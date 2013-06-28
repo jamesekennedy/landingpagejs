@@ -6,6 +6,9 @@ LandingpageJs::Application.routes.draw do
 
   resources :landing_pages do
     resources :page_elements
+    member do 
+      post :duplicate
+    end
   end
 
 

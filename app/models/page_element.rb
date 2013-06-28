@@ -6,7 +6,7 @@ class PageElement < ActiveRecord::Base
 
   def to_json
 
-  {"#{label}" => "#{value}"}
+    {"#{label}" => "#{value}"}
     
   end
 
