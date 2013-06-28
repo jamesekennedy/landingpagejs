@@ -6,12 +6,11 @@ $("document").ready ->
   key = "landing_page_id="
   pos = url.indexOf(key)
   length = url.length
-  alert document.location
   if pos > 0
     page_id = url.substring(pos + key.length, length)
     
     $.ajax(
-      url: "http://localhost:3000/landing_pages/#{page_id}"
+      url: "http://landingpagejs.herokuapp.com/landing_pages/#{page_id}"
       context: document.body
       dataType: "jsonp"
     ).done((data) ->
