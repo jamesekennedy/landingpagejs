@@ -57,6 +57,17 @@ class LandingPagesController < ApplicationController
   end
 
 
+  def create
+
+    @landing_page = LandingPage.new params[:landing_page]
+
+    if @landing_page.save
+      redirect_to landing_pages_path
+    else
+      render :new
+    end
+  end
+
   def edit
     @landing_page = LandingPage.find params[:id]
     
