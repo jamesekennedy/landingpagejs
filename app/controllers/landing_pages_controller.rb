@@ -27,6 +27,13 @@ class LandingPagesController < ApplicationController
       }
   end   
     
+
+
+  end
+
+
+  def new
+    @landing_page = LandingPage.new
   end
 
   def duplicate
