@@ -4,7 +4,7 @@ LandingPage.js lets you more easily test the nice template files you find on pla
 with different content.  
 
 I do a lot of landing pages for product ideas and I've had a lot of success with products like
-unbounce.com, optimizely.com, launchrock.com etc but I was never able to properly customise
+http://unbounce.com, http://optimizely.com, http://launchrock.com etc but I was never able to properly customise
 the templaets just the way I liked them.  Most of these frameworks don't support hosting the 
 pages on your own server either, which makes life a little trickier to patch together analytics
 etc.  
@@ -16,3 +16,11 @@ mustache style {{template tagss}} and replace them with the variables that you d
 To trigger the tags, you should specify the landinge_page_id parameter in the url or the 
 HTML file.  This tells landingpage.js which set of content to fill into your code.  
 
+== Installation
+
+1.  Git clone github.com/jamesekennedy/landingpagejs
+1.  Install the app to wherever you would like to host your content.
+1.  Install a link to the /assets/landingpage.js in head tag of your HTML template.
+1.  Add http://mustache.github.io/ formatted paremters to your HTML code
+1.  Match the parameters with the names in your server.
+1.  Select which set of parameters to display by appending ?landing_page_id=[landinge page id] to your file.  
