@@ -41,7 +41,8 @@ main = ->
     fetch_json()
 
   else
-    alert "No landing_page_id provided"
+    page_id = "default"
+    fetch_json()
 
 
 main()

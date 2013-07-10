@@ -11,7 +11,12 @@ class LandingPagesController < ApplicationController
         
       }
       format.json {
-        if page = LandingPage.find(params[:id])
+        if params[:id] == "default"
+          page = LandingPage.first
+        else
+          page = LandingPage.find(params[:id])
+        end
+        if page
           elements = Hash.new
 
           page.page_elements.each do |element|
