@@ -44,5 +44,5 @@ main = ->
     page_id = "default"
     fetch_json()
 
-
-main()
+jQuery ->
+	main()
